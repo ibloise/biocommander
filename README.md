@@ -8,15 +8,14 @@ Biocommander is a Python framework proposal for working with the most common bio
 
 ## Description
 
-Biocommander is designed to provide a flexible and modular approach to bioinformatics analysis in Python. It aims to simplify the process of working with various bioinformatic tools by providing a unified and object-oriented interface.
+Biocommander is designed to provide a flexible and modular approach to bioinformatics analysis in Python. It aims to simplify the process of working with various bioinformatic tools.
 
 ## Features
 
 - Seamless integration with common bioinformatic tools
 - Object-oriented design for easy extensibility
 - Custom object creation support
-- Simplified and intuitive API
-
+  
 ## Installation
 
 As the project is still in development, it is not available through the Python Package Index (PyPI) yet. To use Biocommander, you can clone this repository and install the package locally.
