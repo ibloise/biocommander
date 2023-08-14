@@ -4,6 +4,17 @@ from .wrappers import CommandLineSoftware
 #TODO: Mejorar la gestion de outputs
 
 class SamtoolsProject(CommandLineSoftware):
+    """
+    Represents a Samtools project software and provides basic functionalities for subclasses.
+
+    SamtoolsProject is a base class for managing Samtools-based projects. It extends the
+    CommandLineSoftware class. Subclasses can inherit from SamtoolsProject to implement specific 
+    functionalities for different file types
+    such as SAM, BAM, VCF, etc.
+
+    Note:
+        This class serves as a base class and should not be instantiated directly.
+    """
     SAM = '.sam'
     BAM = '.bam'
     SORTED = '.sorted'
