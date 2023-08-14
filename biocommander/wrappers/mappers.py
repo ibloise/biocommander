@@ -27,26 +27,24 @@ class BwaMapper(ReadMapper):
 
     def index(self, **kwargs):
 
-        #algo_values = ['is', 'bwtsw']
-
-        cmd = self._build_command([self.SUBCMD_INDEX], kwargs=kwargs, args=self.reference)
+        self.launch_command([self.SUBCMD_INDEX], kwargs=kwargs, args=self.reference)
         
-        self.execute_command(cmd.cmd_list)
 
-    def mem(self, input = [], output='', **kwargs):
+    def mem(self, input = None, output='', **kwargs):
 
         #Add output ¿Specific method?
-        
+        #Para adaptarlo a launch_command hay que añadir la referencia a la lista de inputs
+
         kwargs['o'] = output
+
         cmd = self._build_command([self.SUBCMD_MEM], kwargs=kwargs, args=input)
 
-        cmd.add_arg(self.reference, 1)
+        cmd.add_arg(self.reference, 1) #??
 
         self.execute_command(cmd.cmd_list)
 
     def check_index(self):
         pass
-
         
     def get_version(self):
 
