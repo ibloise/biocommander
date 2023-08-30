@@ -21,7 +21,6 @@ class BwaMapper(ReadMapper):
 
     SUBCMD_INDEX = 'index'
     SUBCMD_MEM = 'mem'
-
     SAM_EXT = 'sam'
     DEFAULT_COMMAND = 'bwa'
 

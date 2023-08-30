@@ -8,6 +8,8 @@ import os
 #TODO:  Gestión de los mensajes. 
 #       Gestión de argumentos duplicados
 #       Gestión de software con posibilidad de vectorización?
+#       Testeos
+
 
 
 class CommandLineSoftware():
@@ -214,6 +216,24 @@ class CommandLineSoftware():
         return output_dict
 
 
+#Hay que desarrollar un sistema más avanzado de captura y gestión de los outputs
+# 2 situaciones:
+    # Output de un único archivo: en ese caso, generalmente hay que especificarlo en un comando
+    # Output de multiples archivos: a veces hay que especificar una CARPETA o a veces puede volvarlos todo al directorio de trabajo
+    # EN todo caso, o se especifica carpeta os e especifica prefijo. Se pueden generar herramientas para almacenar y gestionar las rutas absolutas
+    # ¿Almacenaje del archivo? Problemas de memoria. No hacer por defecto.
+    # Ampliar funciones para que cada Software tenga herramientas para almacenar sus archivos de salida. Esto obliga a incrementar mucho las dependencaias
+        # SAM, BAM, FASTA, GBFF, GFF3
+        # También hay veces que el resultado del análisis es un objeto convertible en tabla -> PANDAS
+        # Para el trazado de outputs, modificar el metodo trace_output para almacenar cada posible ejecuciónd e un comando.
+        # Identificar mediante dict de dicts con algo tipo hash ids para las ejecuciones. Método, tiempo de ejecución, comando y archivo(s) de salida (bastante dificil de gestionar)
+
+        #Cada tipo de salida debe tener una clase asociada:
+            #SAM file, BAM file, etc...
+            # Hacer una clase genérica que 
+
+        #MEJOR: Programar los métodos de lectura como métodos estáticos. De esta manera, los objetos creados deben guardarse en nuevas variables
+        #Mayor control sobre la memoria utilizada para archivos grandes
 
 
 
